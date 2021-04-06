@@ -1,21 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 
 /*GENERALES*/
 
 *{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
+
+:root{
+    --text-color:#363636;
+    --subtitle-color:#605e5e;
+}
+
+
 
 a{
     text-decoration: none;
-    color:#363636;
+    color:var(--text-color);
 }
 
 body{ 
     min-width: 280px;
+}
+
+h2, h2 span{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color:var(--subtitle-color)
+}
+
+h2 span{
+    font-size: 0.6em;
 }
 
 /*NAVBAR*/
@@ -32,16 +53,16 @@ body{
 
 .nav .logo{
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .hamburger{
     outline:none
 }
 
-.hamburger-inner:hover{
+/*.hamburger-inner:hover{
     background-color:#006600;
-}
+}*/
 
 .nav .menu{
     background-color: #fff;
@@ -54,6 +75,7 @@ body{
     align-items: center;
     display: none;
     z-index: 20;
+    padding-top: 2em;
 }
 
 .nav .visible{
@@ -64,15 +86,15 @@ body{
     margin: 20px 0;
 }
 
-.nav .menu .menu-item:hover{
+/*.nav .menu .menu-item:hover{
     color:#006600;
     text-shadow: 2px 2px 10px #006600, 4px 4px 10px #9c9c9c;
-}
+}*/
 
 /*HEADER*/
 
 .banner{
-    height: 550px;
+    height: 100vh;
     position: relative;
 }
 
@@ -112,3 +134,96 @@ body{
     font-size: 1.5em;
 }
 
+/*MAIN*/
+main .separador{
+    display: block;
+    height: 50px;
+    width: 1px;
+    background-color: #605e5e;
+    margin: 0 auto;
+    opacity: 0.6;
+}
+
+main .section{
+    padding: 2em 1.4em;
+}
+
+main .section p{
+    color:var(--text-color);
+    line-height: 1.8em;
+    font-size: 18px;
+    text-align: center;
+}
+
+main .section h2{
+    font-size: 2em;
+    margin-bottom: 0.8em;
+}
+
+main .portfolio .gallery-container .gallery-item{
+    width: 100%;
+    margin-bottom: 1em;
+    height: 300px;
+    
+}
+
+main .portfolio .gallery-container .gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*CONTACT*/
+main .contact .contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .contact .contact-form .contact-form-item{
+    margin-bottom: 25px;
+}
+
+main .contact .contact-form label{
+    font-family: 'Dancing Script', cursive;
+    color:var(--subtitle-color);
+    font-size: 22px;
+    align-self: flex-start;
+}
+
+main .contact .contact-form input{
+    height: 50px;
+    width: 90%;
+    padding: 0 1em;
+}
+
+main .contact .contact-info{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+main .contact .contact-info a{
+    margin: 0.7em auto;
+    font-size: 18px;
+}
+
+footer{
+    margin-top: 3em;
+}
+
+footer .socials{
+    text-align: center;
+}
+
+footer .socials .fab{
+    font-size: 2em;
+    margin: 0 0.6em;
+}
+
+footer span{
+    font-family: 'Dancing Script', cursive;
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+}

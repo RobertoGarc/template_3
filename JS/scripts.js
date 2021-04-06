@@ -7,3 +7,11 @@ hamburger.addEventListener("click", function() {
     hamburger.classList.toggle("is-active");
     menu.classList.toggle('visible');
 });
+
+let menu_item = document.querySelectorAll('.menu-item');
+for (const item of menu_item) {
+  item.addEventListener('click',()=>{
+    hamburger.classList.toggle("is-active");
+    menu.classList.toggle('visible');
+  })
+}
